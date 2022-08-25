@@ -23,12 +23,6 @@ function formatJson(key, value) {
   return `${key}, ${value}`;
 }
 
-function printRange() {
-  const data = getRange([1,1,2, 2, 4, 3, 6, 5, 7, 11, 10]);
-  for (const [key, value] of Object.entries(data)) {
-    console.log(formatJson(key, value));
-  }
-}
 
 function sort(dataList) {
   return dataList.sort((a, b) => a - b);
@@ -37,7 +31,6 @@ function checkIfCountinous(current, previous) {
   return [0, 1,-1].includes(current - previous);
 }
 
-printRange();
 
 module.exports = {
   sort,
