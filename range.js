@@ -4,7 +4,7 @@ function getRange(dataList) {
   let previous = dataList[0];
   let counter = 1;
   const result = {};
-  for (let i = 0; i <= dataList.length-1; i++) {
+   for (let i = 1; i < dataList.length; i++){
     if (checkIfCountinous(dataList[i], previous)) {
       previous = dataList[i];
       counter++;
