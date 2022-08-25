@@ -34,7 +34,7 @@ function sort(dataList) {
   return dataList.sort((a, b) => a - b);
 }
 function checkIfCountinous(current, previous) {
-  return [0, 1].includes(current - previous);
+  return [0, 1,-1].includes(current - previous);
 }
 
 printRange();
