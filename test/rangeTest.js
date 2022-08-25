@@ -23,7 +23,7 @@ describe('formatJson', () => {
 
 describe('checkIfCountinous', () => {
   it('should return true for continous numbers', () => {
-    expect(range.checkIfCountinous(9,10)).to.be.true;
+    expect(range.checkIfCountinous(10,9)).to.be.true;
   });
   it('should return true for same numbers', () => {
     expect(range.checkIfCountinous(5,5)).to.be.true;
