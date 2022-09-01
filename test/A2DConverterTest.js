@@ -7,7 +7,7 @@ describe('integration test', () => {
     const inputs = [0, 1024, 256, 3500, 2000, 1500, 4094];
     expect(
         rangeCounter.getRangeCounter(
-            a2dConverter.convertA2D(inputs, 10, 4094),
+            a2dConverter.convertArrayA2D(inputs, 10, 4094),
         ),
     ).to.deep.equal({'0-1': 2, '3-5': 3, '9-10': 2});
   });
@@ -15,7 +15,7 @@ describe('integration test', () => {
     const inputs = [0, 1024, 256, 3500, 2000, 1500, 4096];
     expect(() => {
       rangeCounter.getRangeCounter(
-          a2dConverter.convertA2D(inputs, 10, 4094),
+          a2dConverter.convertArrayA2D(inputs, 10, 4094),
       );
     }).to.throw('invalid input');
   });
